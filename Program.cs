@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 using System.Timers;
 using System.Threading;
 
-namespace KI_zahlen_lernen
+namespace Z_L
+   
 {
     class Program
     {
