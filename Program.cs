@@ -13,7 +13,6 @@ namespace Z_L
     {
         static void Main(string[] args)
         {
-
             RechnenAdd();
             Console.WriteLine("nochmal ? ");
             string weiter = Console.ReadLine();
@@ -23,13 +22,10 @@ namespace Z_L
                 Console.WriteLine("nochmal ?");
                 weiter = Console.ReadLine();
             }
-
             if (weiter == "nein")
             {
                 Console.WriteLine("Danke, drücken Sie eine Taste um zu Beenden");
             }
-            
-
             Ende();
         }
         static void Ende()
@@ -57,11 +53,9 @@ namespace Z_L
             Console.WriteLine("Gebe die Zahl ein, welche errechnet werden soll");
             string eingabe = Console.ReadLine();       
             return eingabe;
-
         }
         public static void RechnenAdd()
         {
-
             string eingabe = Eingabe();
             Console.WriteLine("wieviele Ergebnisse wollen Sie?");
             
@@ -78,9 +72,6 @@ namespace Z_L
 
             int anzahlInter=0;
             var vergleich = new List<int>();
-            
-
-
             while (anzahlInter != maxErg)
             {
                 
@@ -99,35 +90,27 @@ namespace Z_L
 
                 if (num1 == ergebniss)
                 {
-
                     vergleich.Add(Zahl1);
-                    vergleich.Add(Zahl2);
-                    
+                    vergleich.Add(Zahl2);  
 
                     for (int i = 0; i < maxErg; i++)
                     {
                         i = ergebniss;
                         Console.WriteLine("Summe aus {0} und {1} ergibt die gewünschte Zahl", Zahl1, Zahl2);
-                    }
-                    
+                    } 
                     anzahlInter++;
                 }
-
             }
             IEnumerable<int> disable = vergleich.Distinct();
 
             Console.WriteLine("Folgende zahlen ergeben die gesuchte zahl");
             foreach (var zahlen in disable)
             {
-                
-                
                 Console.WriteLine(zahlen);
-                Console.WriteLine("------");
-                
+                Console.WriteLine("------");  
             }
         }
-        
-        
+
     } 
 
 }
